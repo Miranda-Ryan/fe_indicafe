@@ -1,5 +1,5 @@
 import React from "react";
-import { faBars, faSearch, faCart } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../assets/imgs/dosa.jpg";
 
