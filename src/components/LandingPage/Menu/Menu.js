@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import image1 from "../../../assets/add-images/breakfast-thali.jpeg";
 import image2 from "../../../assets/add-images/italian-cobmo-meal.jpeg";
@@ -21,7 +22,7 @@ const Menu = () => {
           backSpeed={60}
         />
         <div className="container">
-          <a href="/browse">
+          <Link to="/catalog">
             <div className="d-flex justify-content-center align-items-center flex-wrap">
               <div
                 className="card"
@@ -71,7 +72,7 @@ const Menu = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
     );
