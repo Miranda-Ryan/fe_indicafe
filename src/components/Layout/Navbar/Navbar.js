@@ -3,10 +3,13 @@ import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../assets/imgs/dosa.jpg";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import "./Navbar.css";
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth0();
+
   const renderNavbar = () => (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
@@ -42,16 +45,30 @@ const Navbar = () => {
                 Browse
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Sign In
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Register
-              </Link>
-            </li>
+
+            {!isAuthenticated ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signin">
+                    Sign In
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">
+                    Register
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signout">
+                    Signout
+                  </Link>
+                </li>
+              </>
+            )}
+
             <li className="nav-item">
               <Link
                 className={
