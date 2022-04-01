@@ -6,7 +6,7 @@ const Signup = () => {
 
   useEffect(() => {
     loginWithRedirect({ screen_hint: "signup" });
-  }, []);
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
   return <></>;
 };
