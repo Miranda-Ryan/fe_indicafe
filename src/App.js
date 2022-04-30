@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     createUserHandler();
-  }, [isAuthenticated]);
+  }, [isAuthenticated]); //eslint-disable-line
 
   const renderApp = () => <Router />;
 
