@@ -62,6 +62,18 @@ const Navbar = () => {
             ) : (
               <>
                 <li className="nav-item">
+                  <Link
+                    className={
+                      window.location.pathname === "/profile"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                    to="/profile"
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/signout">
                     Signout
                   </Link>

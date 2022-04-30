@@ -6,6 +6,7 @@ import Cart from "../Cart/Cart";
 import Signin from "../Auth/Signin/Signin";
 import Signup from "../Auth/Signup/Signup";
 import Signout from "../Auth/Signout/Signout";
+import Profile from "../Auth/Profile/Profile";
 
 const Router = () => {
   const deployRoutes = () => (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signout" element={<Signout />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
